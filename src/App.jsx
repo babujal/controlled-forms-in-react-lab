@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Bookshelf from './components/Bookshelf'
 import './App.css'
 
 function App() {
@@ -8,7 +7,8 @@ function App() {
 
   return (
     <>
-    <h1>Hello World!</h1>
+    <h1>My Bookshelf</h1>
+    <Bookshelf />
     </>
   )
 }
