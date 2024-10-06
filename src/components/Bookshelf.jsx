@@ -29,10 +29,10 @@ const Bookshelf = () => {
             <div className="formDiv">
                 <h3>Add a Book</h3>
                 <form
-                onSubmit={(e) => {
-                    e.preventDefault();
-                    handleSubmit()
-                }}
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                        handleSubmit()
+                    }}
                 >
                     <label htmlFor="title">Title:</label>
                     <input type="text"
@@ -52,7 +52,14 @@ const Bookshelf = () => {
                     <button type='submit'>Submit</button>
                 </form>
             </div>
-            <div className="bookCardsDiv">{/* Book cards will display here */}</div>
+            {books.map((book, i) => {
+                return(
+                <div className="bookCardsDiv">
+                        <h3>{book.title}</h3>
+                        <p>by {book.author}</p>
+                </div>
+                )
+            })}
         </div>
     )
 }
