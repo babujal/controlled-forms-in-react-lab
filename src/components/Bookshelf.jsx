@@ -22,6 +22,12 @@ const Bookshelf = () => {
     const handleSubmit = () => {
         setBooks([...books, newBook])
         console.log('Books:', books)
+        setNewBook(
+            {
+                title: '',
+                author: ''
+            }
+        )
     }
 
     return (
